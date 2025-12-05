@@ -1,6 +1,6 @@
 // src/App.jsx
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom"; // useLocation 추가
 import Header from "./components/Header";
 import WorkSection from "./components/WorkSection";
 import JoySection from "./components/JoySection";
@@ -113,11 +113,12 @@ const ContactPageWrapper = ({ lang }) => (
 // ----- 메인 App -----
 function App() {
   const [lang, setLang] = useState("en");
+  const location = useLocation(); // 현재 경로 정보
+  const isContactPage = location.pathname === "/contact";
 
   return (
     <>
       <Header lang={lang} onChangeLang={setLang} />
-
       <main
         style={{
           width: "100%",
@@ -137,9 +138,8 @@ function App() {
           <Route path="/contact" element={<ContactPageWrapper lang={lang} />} />
         </Routes>
       </main>
-
       {/* 우측 하단 Contact 버튼 → /contact로 이동 */}
-      <ContactButton />
+      {!isContactPage && <ContactButton />}
     </>
   );
 }

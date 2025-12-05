@@ -1,19 +1,18 @@
 // src/components/Header.jsx
 import "./Header.css";
 import { Link, useLocation } from "react-router-dom";
+import headerLogo from "../assets/headerLogo.png"; // 로고 이미지 추가
 
 const HEADER_TEXT = {
   en: {
-    logo: "HYEON JI ㅡ RA",
     work: "WORK",
     joy: "JOY",
     about: "ABOUT",
   },
   ko: {
-    logo: "라현지",
-    work: "작업물",
-    joy: "취미",
     about: "소개",
+    joy: "즐거움",
+    work: "작업물",
   },
 };
 
@@ -43,19 +42,26 @@ const Header = ({ lang, onChangeLang }) => {
         boxSizing: "border-box",
       }}
     >
-      {/* 로고 → 홈으로 이동 */}
+      {/* 로고 이미지 → 클릭하면 홈으로 이동 */}
       <Link
         to="/"
         onClick={goTop}
         style={{
-          fontSize: "1.5rem",
-          fontWeight: 800,
-          letterSpacing: "0.05em",
-          color: "#000",
+          display: "flex",
+          alignItems: "center",
           textDecoration: "none",
         }}
       >
-        {t.logo}
+        <img
+          src={headerLogo}
+          alt="Logo"
+          style={{
+            height: "32px", // 원하는 크기 조절
+            width: "auto",
+            display: "block",
+            marginLeft: "1rem",
+          }}
+        />
       </Link>
 
       {/* NAV */}
@@ -68,17 +74,15 @@ const Header = ({ lang, onChangeLang }) => {
           letterSpacing: "-0.05em",
         }}
       >
-        {/* WORK: 홈으로 이동 (Hero + Work 스크롤) */}
         <Link
-          to="/"
-          onClick={goTop}
+          to="/about"
           className="nav-link"
           style={{
             textDecoration: "none",
-            color: isActive("/") ? "#E19A14" : "#000",
+            color: isActive("/about") ? "#E19A14" : "#000",
           }}
         >
-          {t.work}
+          {t.about}
         </Link>
 
         <Link
@@ -93,14 +97,15 @@ const Header = ({ lang, onChangeLang }) => {
         </Link>
 
         <Link
-          to="/about"
+          to="/"
+          onClick={goTop}
           className="nav-link"
           style={{
             textDecoration: "none",
-            color: isActive("/about") ? "#E19A14" : "#000",
+            color: isActive("/") ? "#E19A14" : "#000",
           }}
         >
-          {t.about}
+          {t.work}
         </Link>
       </nav>
 
