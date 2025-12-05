@@ -1,0 +1,37 @@
+/* Header.css */
+.nav-link {
+  text-decoration: none;
+  color: #444;
+  display: inline-block;
+  transition: transform 0.25s ease-out, color 0.2s ease;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  transform: scale(1.12);
+  color: #e19a14;
+}
+
+.nav-link.active {
+  transfrom: scale(1.12);
+  color: #e19a14;
+  /* font-weight: 900; */
+}
+
+.nav-link.active:hover {
+  transform: scale(1.12);
+  color: #e19a14;
+}
+
+/* 언어 토글 스타일 */
+.lang-link {
+  cursor: pointer;
+  /* transform: 0.2s ease 제거 */
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.lang-link:hover {
+  /* transform: scale(1.08) 제거 */
+  color: #e19a14;
+}
