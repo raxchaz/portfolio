@@ -1,3 +1,4 @@
+// src/pages/ContactPage.jsx
 import "./ContactPage.css";
 
 const CONTACT_TEXT = {
@@ -38,19 +39,33 @@ const ContactPage = ({ lang }) => {
           <p className="contact-body">{t.body2}</p>
         </div>
 
-        {/* 오른쪽 폼 */}
+        {/* 오른쪽 폼 - Web3Forms 연동 */}
         <form
-          action="https://formsubmit.co/rachaz@naver.com"
+          action="https://api.web3forms.com/submit"
           method="POST"
           className="contact-form"
         >
-          {/* FormSubmit 옵션 */}
+          {/* Web3Forms 필수 키 */}
           <input
             type="hidden"
-            name="_subject"
+            name="access_key"
+            value="c291cfc2-40c6-4b35-a850-7ae5c783634c"
+          />
+
+          {/* 메일 제목 / 발신자 이름 */}
+          <input
+            type="hidden"
+            name="subject"
             value="New message from portfolio"
           />
-          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="from_name"
+            value="Portfolio Contact Form"
+          />
+
+          {/* 스팸 방지용 허니팟 */}
+          <input type="checkbox" name="botcheck" style={{ display: "none" }} />
 
           {/* Name */}
           <div className="form-group">
