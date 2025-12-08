@@ -71,7 +71,7 @@ const AboutSection = ({ lang }) => {
             src={profileImg}
             alt="Profile"
             style={{
-              width: "101%",
+              width: "100%",
               height: "100%",
               objectFit: "cover",
               display: "block",
