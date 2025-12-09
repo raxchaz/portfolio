@@ -79,11 +79,10 @@ const AboutSection = ({ lang }) => {
           />
         </div>
 
-        {/* 오른쪽 텍스트 */}
         <div>
           <p
             style={{
-              fontSize: "0.9rem",
+              fontSize: "0.95rrem",
               fontWeight: 700,
               letterSpacing: "0.18em",
               textTransform: "uppercase",
