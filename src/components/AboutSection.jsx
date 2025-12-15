@@ -72,7 +72,7 @@ const AboutSection = ({ lang }) => {
             alt="Profile"
             style={{
               width: "100%",
-              height: "101%",
+              height: "100%",
               objectFit: "cover",
               display: "block",
             }}
