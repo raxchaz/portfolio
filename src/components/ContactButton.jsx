@@ -7,7 +7,7 @@ const ContactButton = () => {
       to="/contact"
       style={{
         position: "fixed",
-        right: "2rem",
+        right: "2.12rem",
         bottom: "2rem",
         backgroundColor: "#E19A14",
         color: "#fff",
