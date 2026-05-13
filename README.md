@@ -1,16 +1,28 @@
-# React + Vite
+### Thank you for taking the time to review my work and thought process.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### ✅ Information
 
-Currently, two official plugins are available:
+This repository contains my personal portfolio website. <br/>
+It documents how I approach complex problems — <br/>
+from framing the right questions to building and analyzing systems that scale.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### ✅ What this portfolio is about
 
-## React Compiler
+This portfolio is not limited to a single industry or technology.<br/>
+Instead, it focuses on transferable skills that matter across domains:<br/>
+problem definition, structured thinking, data-driven analysis, and execution under real-world constraints.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+#### ✅ Portfolio structure
 
-## Expanding the ESLint configuration
+- Case Studies: End-to-end problem-solving narratives<br/>
+- Data & Systems: How data supports decisions and operations<br/>
+- Writing: Context, trade-offs, and reflections behind each project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### ✅ How to read this portfolio
+
+Each case study is organized around:<br/>
+1. The problem and constraints<br/>
+2. Decisions made and alternatives considered<br/>
+3. Implementation and analysis<br/>
+4. Outcomes and learnings
+
